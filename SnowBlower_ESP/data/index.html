@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Снегоуборщик</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="controls">
+            <a id="forward" class="arrow" onpointerdown="forward()" onpointerup="brake()"></a>
+            <a id="left" class="arrow" onpointerdown="left()" onpointerup="brake()"></a>
+            <a id="right" class="arrow" onpointerdown="right()" onpointerup="brake()"></a>
+            <a id="back" class="arrow" onpointerdown="back()" onpointerup="brake()"></a>
+        </div>
+    </body>
+</html>
+
+<script>
+    function forward() {
+        console.log("forward");
+        fetch("/forward");
+    }
+
+    function left() {
+        fetch("/left");
+        console.log("left");
+    }
+
+    function right() {
+        fetch("/right");
+        console.log("right");
+    }
+
+    function back() {
+        fetch("/back");
+        console.log("back");
+    }
+
+    function brake() {
+        fetch("/brake");
+        console.log("brake");
+    }
+    
+</script>
